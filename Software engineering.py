@@ -31,6 +31,13 @@ def encode(password):
 
     return encoded_pass
 
+def decode(encoded_pass):
+    password = ''
+    for num in encoded_pass:
+        password += str((int(num) + 7) % 10)
+
+    return password
+
 
 if __name__ == "__main__":
     main()
